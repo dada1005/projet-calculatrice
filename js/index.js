@@ -116,11 +116,11 @@ btnEgal.addEventListener("click", function () {
             break;
 
         case "-":
-            divResultat.innerText = Number(divNombre1.innerText) * Number(divNombre2.innerText);
+            divResultat.innerText = Number(divNombre1.innerText) - Number(divNombre2.innerText);
             break;
 
         case "+":
-            divResultat.innerText = Number(divNombre1.innerText) * Number(divNombre2.innerText);
+            divResultat.innerText = Number(divNombre1.innerText) + Number(divNombre2.innerText);
             break;
     }
 });
