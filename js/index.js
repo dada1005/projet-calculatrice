@@ -25,78 +25,100 @@ let btn0 = document.getElementById("btn0");
 let btnVirgule = document.getElementById("btnVirgule");
 let btnEgal = document.getElementById("btnEgal");
 
-//abonnement des boutons dans la div du nombre 1
-btn7.addEventListener("click", function(){
-    divNombre1.innerText += 7;
-    console.log(7);
+// je definie mes variable 
+let affichage = divNombre1
+
+//abonnement des boutons chiffres
+btn7.addEventListener("click", function () {
+    affichage.innerText += 7;
 });
 
-btn8.addEventListener("click", function(){
-    divNombre1.innerText += 8;
-    console.log(8);
+btn8.addEventListener("click", function () {
+    affichage.innerText += 8;
 });
-btn9.addEventListener("click", function(){
-    divNombre1.innerText += 9;
-    console.log(9);
+btn9.addEventListener("click", function () {
+    affichage.innerText += 9;
 });
-btn4.addEventListener("click", function(){
-    divNombre1.innerText += 7;
-    console.log(7);
+btn4.addEventListener("click", function () {
+    affichage.innerText += 7;
 });
-btn5.addEventListener("click", function(){
-    divNombre1.innerText += 5;
-    console.log(5);
+btn5.addEventListener("click", function () {
+    affichage.innerText += 5;
 });
-btn6.addEventListener("click", function(){
-    divNombre1.innerText += 6;
-    console.log(6);
+btn6.addEventListener("click", function () {
+    affichage.innerText += 6;
 });
-btn1.addEventListener("click", function(){
-    divNombre1.innerText += 1;
-    console.log(1);
+btn1.addEventListener("click", function () {
+    affichage.innerText += 1;
 });
-btn2.addEventListener("click", function(){
-    divNombre1.innerText += 2;
-    console.log(2);
+btn2.addEventListener("click", function () {
+    affichage.innerText += 2;
 });
-btn3.addEventListener("click", function(){
-    divNombre1.innerText += 3;
-    console.log(3);
+btn3.addEventListener("click", function () {
+    affichage.innerText += 3;
 });
-btn0.addEventListener("click", function(){
-    divNombre1.innerText += 0;
-    console.log(0);
+btn0.addEventListener("click", function () {
+    affichage.innerText += 0;
 });
 
-// abonnement des boutons symboles dans la div symbole
-btnZero.addEventListener("click", function(){
+
+
+// abonnement du bouton virgule
+btnVirgule.addEventListener("click", function () {
+    affichage.innerText += ",";
+});
+// abonnement du bouton supprimé
+btnZero.addEventListener("click", function () {
     divSymbole.innerText = "";
     divNombre1.innerText = "";
-});
-btnPercent.addEventListener("click", function(){
-    divSymbole.innerText = "%";
+    divNombre2.innerText = "";
+    divResultat.innerText = "";
+    affichage = divNombre1;
 });
 
-btnDiv.addEventListener("click", function(){
+
+// abonnement des boutons operations
+btnDiv.addEventListener("click", function () {
     divSymbole.innerText = "/";
+    affichage = divNombre2;
 });
-btnMul.addEventListener("click", function(){
+btnMul.addEventListener("click", function () {
     divSymbole.innerText = "X";
+    affichage = divNombre2;
 });
-btnSous.addEventListener("click", function(){
+btnSous.addEventListener("click", function () {
     divSymbole.innerText = "-";
+    affichage = divNombre2;
 });
-btnAdd.addEventListener("click", function(){
+btnAdd.addEventListener("click", function () {
     divSymbole.innerText = "+";
-});
-btnEgal.addEventListener("click", function(){
-    divSymbole.innerText = "=";
+    affichage = divNombre2;
 });
 
 
-//abonnement des boutons de la div du nombre 2
+// abonnement du bouton égal
 
+btnEgal.addEventListener("click", function () {
 
+    let operation = divSymbole.innerHTML;
+    switch (operation) {
+        case "/":
+            divResultat.innerText = Number(divNombre1.innerText) / Number(divNombre2.innerText);
+            break;
+
+        case "X":
+            divResultat.innerText = Number(divNombre1.innerText) * Number(divNombre2.innerText);
+            break;
+
+        case "-":
+            divResultat.innerText = Number(divNombre1.innerText) - Number(divNombre2.innerText);
+            break;
+
+        case "+":
+            divResultat.innerText = Number(divNombre1.innerText) + Number(divNombre2.innerText);
+            break;
+    }
+});
 
 
 
