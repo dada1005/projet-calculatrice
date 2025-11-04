@@ -62,10 +62,9 @@ btn0.addEventListener("click", function () {
 });
 
 
-
 // abonnement du bouton virgule
 btnVirgule.addEventListener("click", function () {
-    affichage.innerText += ",";
+    affichage.innerText += ".";
 });
 // abonnement du bouton supprimé
 btnZero.addEventListener("click", function () {
@@ -74,26 +73,31 @@ btnZero.addEventListener("click", function () {
     divNombre2.innerText = "";
     divResultat.innerText = "";
     affichage = divNombre1;
-    affichage = divNombre2;
-
 });
 
 
 // abonnement des boutons operations
 btnDiv.addEventListener("click", function () {
     divSymbole.innerText = "/";
+    affichage = divNombre2;
+
 });
 btnMul.addEventListener("click", function () {
     divSymbole.innerText = "X";
+    affichage = divNombre2;
+
    
 });
 btnSous.addEventListener("click", function () {
     divSymbole.innerText = "-";
+    affichage = divNombre2;
+
     
 });
 btnAdd.addEventListener("click", function () {
     divSymbole.innerText = "+";
-    
+    affichage = divNombre2;
+
 });
 
 
@@ -108,15 +112,15 @@ btnEgal.addEventListener("click", function () {
             break;
 
         case "X":
-            divResultat.innerText = Number(divNombre1.innerText) * Number(divNombre2.innerText);
+            divResultat.innerText= Number(divNombre1.innerText) * Number(divNombre2.innerText);
             break;
 
         case "-":
-            divResultat.innerText = Number(divNombre1.innerText) - Number(divNombre2.innerText);
+            divResultat.innerText = Number(divNombre1.innerText) * Number(divNombre2.innerText);
             break;
 
         case "+":
-            divResultat.innerText = Number(divNombre1.innerText) + Number(divNombre2.innerText);
+            divResultat.innerText = Number(divNombre1.innerText) * Number(divNombre2.innerText);
             break;
     }
 });
