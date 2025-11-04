@@ -74,25 +74,26 @@ btnZero.addEventListener("click", function () {
     divNombre2.innerText = "";
     divResultat.innerText = "";
     affichage = divNombre1;
+    affichage = divNombre2;
+
 });
 
 
 // abonnement des boutons operations
 btnDiv.addEventListener("click", function () {
     divSymbole.innerText = "/";
-    affichage = divNombre2;
 });
 btnMul.addEventListener("click", function () {
     divSymbole.innerText = "X";
-    affichage = divNombre2;
+   
 });
 btnSous.addEventListener("click", function () {
     divSymbole.innerText = "-";
-    affichage = divNombre2;
+    
 });
 btnAdd.addEventListener("click", function () {
     divSymbole.innerText = "+";
-    affichage = divNombre2;
+    
 });
 
 
