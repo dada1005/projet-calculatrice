@@ -117,7 +117,7 @@ btnVirgule.addEventListener("click", function () {
 
 
 });
-// abonnement du bouton supprimé
+// abonnement du bouton zéro
 btnZero.addEventListener("click", function () {
     divSymbole.innerText = "";
     divNombre1.innerText = "";
@@ -126,6 +126,10 @@ btnZero.addEventListener("click", function () {
     affichage = divNombre1;
 });
 
+// abonnement du bouton supprimé
+btnSup.addEventListener("click", function(){
+    affichage.innerText = affichage.innerText.slice(0, -1);
+})
 
 // abonnement des boutons operations
 btnDiv.addEventListener("click", function () {
