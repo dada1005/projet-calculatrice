@@ -32,6 +32,7 @@ let affichage = divNombre1
 btn7.addEventListener("click", function () {
     if (affichage.innerText == "0") {
         affichage.innerText = 7;
+
     } else if (affichage.innerText !== "0") {
         affichage.innerText += 7;
     }
@@ -97,18 +98,24 @@ btn3.addEventListener("click", function () {
 });
 btn0.addEventListener("click", function () {
     if (affichage.innerText == "") {
-        affichage.innerText = 0
+        affichage.innerText = 0;
 
-    } else if (affichage.innerText != "0") {
-        affichage.innerText += 0
+    } else {
+        affichage.innerText += 0;
     }
 
 });
 
-
 // abonnement du bouton virgule
 btnVirgule.addEventListener("click", function () {
-    affichage.innerText += ".";
+    let regexPoint = /\./g;
+    if (affichage.innerText == "") {
+        affichage.innerText = "0.";
+    } else if (affichage.innerText !== "0." && affichage.innerText.search(regexPoint) < 0) {
+        affichage.innerText += "."
+    }
+
+
 });
 // abonnement du bouton supprimé
 btnZero.addEventListener("click", function () {
@@ -148,9 +155,15 @@ btnAdd.addEventListener("click", function () {
 btnEgal.addEventListener("click", function () {
 
     let operation = divSymbole.innerHTML;
+
     switch (operation) {
         case "/":
-            divResultat.innerText = Number(divNombre1.innerText) / Number(divNombre2.innerText);
+            if (divNombre2.innerHTML == 0)
+                divResultat.innerText = "non defini";
+            else {
+                divResultat.innerText = Number(divNombre1.innerText) / Number(divNombre2.innerText);
+            }
+
             break;
 
         case "X":
