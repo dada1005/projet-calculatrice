@@ -57,3 +57,6 @@ button {
     justify-content: space-around;
     flex-wrap: wrap;
 }
+#idResultat{
+    text-align: left;
+}
