@@ -30,35 +30,79 @@ let affichage = divNombre1
 
 //abonnement des boutons chiffres
 btn7.addEventListener("click", function () {
-    affichage.innerText += 7;
+    if (affichage.innerText == "0") {
+        affichage.innerText = 7;
+    } else if (affichage.innerText !== "0") {
+        affichage.innerText += 7;
+    }
+
 });
 
 btn8.addEventListener("click", function () {
-    affichage.innerText += 8;
+    if (affichage.innerText == "0") {
+        affichage.innerText = 8;
+    } else if (affichage.innerText !== "0") {
+        affichage.innerText += 8;
+    }
 });
 btn9.addEventListener("click", function () {
-    affichage.innerText += 9;
+    if (affichage.innerText == "0") {
+        affichage.innerText = 9;
+    } else if (affichage.innerText !== "0") {
+        affichage.innerText += 9;
+    }
+
 });
 btn4.addEventListener("click", function () {
-    affichage.innerText += 7;
+    if (affichage.innerText == "0") {
+        affichage.innerText = 4;
+    } else if (affichage.innerText !== "0") {
+        affichage.innerText += 4;
+    }
 });
 btn5.addEventListener("click", function () {
-    affichage.innerText += 5;
+    if (affichage.innerText == "0") {
+        affichage.innerText = 5;
+    } else if (affichage.innerText !== "0") {
+        affichage.innerText += 5;
+    }
 });
 btn6.addEventListener("click", function () {
-    affichage.innerText += 6;
+    if (affichage.innerText == "0") {
+        affichage.innerText = 6;
+    } else if (affichage.innerText !== "0") {
+        affichage.innerText += 6;
+    }
 });
 btn1.addEventListener("click", function () {
-    affichage.innerText += 1;
+    if (affichage.innerText == "0") {
+        affichage.innerText = 1;
+    } else if (affichage.innerText !== "0") {
+        affichage.innerText += 1;
+    }
 });
 btn2.addEventListener("click", function () {
-    affichage.innerText += 2;
+    if (affichage.innerText == "0") {
+        affichage.innerText = 2;
+    } else if (affichage.innerText !== "0") {
+        affichage.innerText += 2;
+    }
 });
 btn3.addEventListener("click", function () {
-    affichage.innerText += 3;
+    if (affichage.innerText == "0") {
+        affichage.innerText = 3;
+    } else if (affichage.innerText !== "0") {
+        affichage.innerText += 3;
+    }
 });
 btn0.addEventListener("click", function () {
-    affichage.innerText += 0;
+    if (affichage.innerText == "") {
+        affichage.innerText = 0
+
+    } else if (affichage.innerText != "0") {
+        affichage.innerText += 0
+    }
+
 });
 
 
@@ -86,20 +130,18 @@ btnMul.addEventListener("click", function () {
     divSymbole.innerText = "X";
     affichage = divNombre2;
 
-   
 });
 btnSous.addEventListener("click", function () {
     divSymbole.innerText = "-";
     affichage = divNombre2;
 
-    
+
 });
 btnAdd.addEventListener("click", function () {
     divSymbole.innerText = "+";
     affichage = divNombre2;
 
 });
-
 
 // abonnement du bouton égal
 
@@ -112,7 +154,7 @@ btnEgal.addEventListener("click", function () {
             break;
 
         case "X":
-            divResultat.innerText= Number(divNombre1.innerText) * Number(divNombre2.innerText);
+            divResultat.innerText = Number(divNombre1.innerText) * Number(divNombre2.innerText);
             break;
 
         case "-":
